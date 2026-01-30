@@ -1,0 +1,150 @@
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6c757d;
+  --border: #e5e7eb;
+  --input-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg: #0f1115;
+  --card: #1a1d24;
+  --text: #e8e8e8;
+  --muted: #9ca3af;
+  --border: #2a2f3a;
+  --input-bg: #141821;
+}
+
+body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+.card {
+  background: var(--card) !important;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.text-secondary {
+  color: var(--muted) !important;
+}
+
+/* Inputs */
+.form-control {
+  background: var(--input-bg) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+/* Labels */
+label {
+  color: var(--text) !important;
+}
+
+/* Tabela */
+table {
+  color: var(--text) !important;
+}
+
+.table {
+  background: var(--card) !important;
+}
+
+.table th,
+.table td {
+  background: transparent !important;
+  border-color: var(--border) !important;
+}
+
+/* Badges */
+.badge {
+  opacity: 0.9;
+}
+
+
+
+/* Contraste geral no dark */
+[data-theme="dark"] {
+  --text: #f3f4f6;
+  --muted: #cbd5e1;      /* MAIS claro que antes */
+  --border: #334155;     /* um pouco mais visível */
+  --card: #151a23;
+  --input-bg: #0f1420;
+}
+
+/* Bootstrap "text-secondary" estava apagando tudo */
+[data-theme="dark"] .text-secondary {
+  color: var(--muted) !important;
+}
+
+/* Placeholder e help-text */
+[data-theme="dark"] .form-control::placeholder {
+  color: #94a3b8 !important;
+  opacity: 1;
+}
+
+[data-theme="dark"] .form-text {
+  color: #aebad0 !important;
+}
+
+/* Títulos e labels */
+[data-theme="dark"] label,
+[data-theme="dark"] h1, 
+[data-theme="dark"] h2, 
+[data-theme="dark"] h3, 
+[data-theme="dark"] .h3, 
+[data-theme="dark"] .h5 {
+  color: var(--text) !important;
+}
+
+/* Cards: mais contraste e "separação" do fundo */
+[data-theme="dark"] .card {
+  background: var(--card) !important;
+  border-color: var(--border) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,.45) !important;
+}
+
+/* Tabela: linhas e header mais legíveis */
+[data-theme="dark"] .table thead th {
+  color: #e5e7eb !important;
+  border-bottom-color: var(--border) !important;
+}
+
+[data-theme="dark"] .table td,
+[data-theme="dark"] .table th {
+  color: #e5e7eb !important;
+  border-top-color: rgba(148, 163, 184, .25) !important;
+}
+
+[data-theme="dark"] .table-hover tbody tr:hover td {
+  background: rgba(148, 163, 184, .08) !important;
+}
+
+/* Botões outline no dark */
+[data-theme="dark"] .btn-outline-secondary {
+  color: #e5e7eb !important;
+  border-color: #64748b !important;
+}
+[data-theme="dark"] .btn-outline-secondary:hover {
+  background: rgba(148, 163, 184, .12) !important;
+}
+
+
+/* NÚMEROS GRANDES — CONTRASTE NO DARK */
+[data-theme="dark"] .display-6,
+[data-theme="dark"] .fs-3 {
+  color: #f9fafb !important;
+  font-weight: 600;
+}
+
+/* Quando for prejuízo (valor negativo), deixar mais visível */
+[data-theme="dark"] .display-6.negative {
+  color: #f87171 !important;
+}
+
+/* Quando for lucro */
+[data-theme="dark"] .display-6.positive {
+  color: #4ade80 !important;
+}
